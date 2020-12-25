@@ -5,8 +5,8 @@ from time import sleep
 import discord
 from discord.ext import commands
 
-TOKEN = os.getenv('TOKEN')
-#TOKEN = "NzkwMzE5NjIyOTM1MTUwNTky.X9-4gQ.lCXDjHsn5cPsqDpweMssAvEqkK8"
+#TOKEN = os.getenv('TOKEN')
+TOKEN = "NzkwMzE5NjIyOTM1MTUwNTky.X9-4gQ.xuvsKurTswGt5dim9zNSbAkTLFQ"
 
 bot = commands.Bot(command_prefix='-b')
 
