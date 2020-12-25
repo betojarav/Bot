@@ -5,8 +5,8 @@ from time import sleep
 import discord
 from discord.ext import commands
 
-#TOKEN = os.getenv('TOKEN')
-TOKEN = "NzkwMzE5NjIyOTM1MTUwNTky.X9-4gQ.lCXDjHsn5cPsqDpweMssAvEqkK8"
+TOKEN = os.getenv('TOKEN')
+#TOKEN = "NzkwMzE5NjIyOTM1MTUwNTky.X9-4gQ.lCXDjHsn5cPsqDpweMssAvEqkK8"
 
 bot = commands.Bot(command_prefix='-b')
 
@@ -56,13 +56,13 @@ async def dime(ctx, *arg):
 @bot.command()
 async def joyitas(ctx):
     try:
-        msg = "Tengo estas joyitas para ti:\n"
+        msg = "Tengo estos raps para tí:\n"
         available = os.listdir("assets")
         for i, name in enumerate(available):
             msg += f" {i}. {name[:-4]}\n"
         await ctx.send(msg)
     except Exception as e:
-        print("joyitas", e)
+        print("Raps", e)
 
 @bot.command()
 async def compañia(ctx, arg):
@@ -79,5 +79,4 @@ async def compañia(ctx, arg):
 
 
 if __name__ == "__main__":
-    
     bot.run(TOKEN)
