@@ -5,17 +5,18 @@ from time import sleep
 import discord
 from discord.ext import commands
 
-TOKEN = os.getenv('TOKEN')
+#TOKEN = os.getenv('TOKEN')
+TOKEN = "NzkwMzE5NjIyOTM1MTUwNTky.X9-4gQ.lCXDjHsn5cPsqDpweMssAvEqkK8"
 
-bot = commands.Bot(command_prefix='--')
+bot = commands.Bot(command_prefix='-b')
 
 @bot.command()
-async def join(ctx):
+async def metete(ctx):
     try:
         channel = ctx.author.voice.channel
         return await channel.connect()
     except Exception as e:
-        print("join", e)
+        print("metete", e)
 
 @bot.command()
 async def leave(ctx):
@@ -42,7 +43,7 @@ async def dime(ctx, *arg):
                 audio = random.choice(available)
 
             if audio:
-                voice.play(discord.FFmpegPCMAudio(executable="ffmpeg", source=f"assets/{audio}"))
+                voice.play(discord.FFmpegPCMAudio(executable="./ffmpeg", source=f"assets/{audio}"))
                 while voice.is_playing():
                     sleep(.1)
             else:
